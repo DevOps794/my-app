@@ -1,29 +1,22 @@
-Pipeline
-		{
+Pipeline {
 			agent any 
-				{
-					stages 
-					{
-						stage('Clean')
-						{
-							steps 
-								{
+				stages {
+						stage('Clean') {
+							steps {
 								bat "mvn clean"
 								}
 						}
-						stage ('Test')
-						{
-							steps
-								{
+						stage ('Test') {
+							steps {
 								bat "mvn test"
 								}
 						}
-						stage ('Package')
-							steps
-								{
+						stage ('Package') {
+							steps {
 								bat "mvn package"
 								}
+						}
 					}
-				}
-		}
+				
+	}
 		
